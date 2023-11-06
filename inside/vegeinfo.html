@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="inside.css">
+     <meta charset="UTF-8">   \
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	</head>
+<body>
+<img src="logo.jpg" class="logo" href = "MINI_PROJECT.html" >
+	<div id="sidebar">
+		<nav>
+			<ul>
+				<li><a class = "don" href = "C:\Mini Project/MINI_PROJECT.html">HOME</a></li>
+		<li><a href = "ceasarinfo.html">Caesar Cipher </a>	
+		<li><a href = "vegeinfo.html">Vigenère Cipher</a>
+		</li>
+		<li><a href = "subinfo.html">Substitution Cipher</a>
+		<li><a href = "rotinfo.html">ROT13 Cipher</a>
+		</li>
+		<li><a href = "atinfo.html">Atbash Cipher</a>
+		</li>
+			</ul>
+		</nav>
+	</div>
+	<div id = "menubtn">
+		<img src="menu.png" id = "menu">
+	</div>
+	<script>
+		var menubtn = document.getElementById("menubtn")
+		var sidebar = document.getElementById("sidebar")
+		var menu = document.getElementById("menu")	
+		sidebar.style.right="-300px";	
+		menubtn.onclick = function(){
+		if(sidebar.style.right=="-300px"){
+			sidebar.style.right="0";
+			menu.src="close.png";
+		}
+		else{
+			sidebar.style.right="-300px";
+			menu.src="menu.png";
+		}
+		}
+	</script>
+    <div class="container">
+        <div class="bannertxt">
+         <h2>Vigenère Cipher</h2>
+        <p>The Vigenère cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. A polyalphabetic cipher uses multiple substitution alphabets to encrypt the text, making it more secure than simple substitution ciphers.</p>
+        <p>Here's how the Vigenère cipher works:</p>
+        
+            <li>Select a keyword (e.g., "KEY").</li>
+            <li>Repeat the keyword to match the length of the plaintext message (e.g., "KEYKEYKEY...").</li>
+            <li>For each letter in the plaintext, shift it forward by the corresponding letter in the keyword (e.g., 'K' shifts by 10, 'E' by 4, 'Y' by 24).</li>
+            <li>Wrap around the alphabet if necessary.</li>
+            <li>Encrypt the message by replacing each letter with the shifted one.</li>
+       
+        <a>Example:</p>
+        <a>Plaintext: "HELLO"</p>
+        <a>Keyword: "KEY"</p>
+        <a>Repeated Keyword: "KEYKEYKEY"</p>
+        <p>Encrypted Message:</p>
+        <a>"H" is shifted by "K" to become "K".</a><br>
+        <a>"E" is shifted by "E" to become "E".</a><br>
+        <a>"L" is shifted by "Y" to become "I".</a><br>
+        <a>"L" is shifted by "K" to become "W".</a><br>
+        <a>"O" is shifted by "E" to become "X".</a><br>
+        <a>So, the encrypted message is "KEIWX".</a><br>
+        <a>Decryption is performed by shifting the letters in the reverse direction using the same keyword.</a>
+   </div></div>
+</body>
+</html>
