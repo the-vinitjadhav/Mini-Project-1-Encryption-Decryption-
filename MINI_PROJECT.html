@@ -1,0 +1,90 @@
+<html>
+<head>
+<title > CYPHERN</title>
+<link rel="stylesheet" href="1st.css">
+<meta name="viewport" content="width = device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Pixelify+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+</head>
+<body>
+	<div id="sidebar">
+		<nav>
+			<ul>
+				<li><a class = "don" href = "MINI_PROJECT.html">HOME</a></li>
+		<li><a href = "inside/ceasarinfo.html">Caesar Cipher </a>	
+		<li><a href = "inside/vegeinfo.html">Vigenère Cipher</a>
+		</li>
+		<li><a href = "inside/subinfo.html">Substitution Cipher</a>
+		<li><a href = "inside/rotinfo.html">ROT13 Cipher</a>
+		</li>
+		<li><a href = "inside/atinfo.html">Atbash Cipher</a>
+		</li>
+			</ul>
+		</nav>
+	</div>
+<div id = "menubtn">
+	<img src="inside/menu.png" id = "menu">
+</div>
+<script>
+	var menubtn = document.getElementById("menubtn")
+	var sidebar = document.getElementById("sidebar")
+	var menu = document.getElementById("menu")
+	sidebar.style.right="-300px";
+	menubtn.onclick = function(){
+	if(sidebar.style.right=="-300px"){
+		sidebar.style.right="0";
+		menu.src="inside/close.png";
+	}
+	else{
+		sidebar.style.right="-300px";
+		menu.src="inside/menu.png";
+	}
+	}
+</script>
+<section id = "banner">
+	<img src="inside/logo.jpg" class="logo" href = "MINI_PROJECT.html" >
+	<div class="bannertxt">
+		<h1>Cyphern </h1><br>
+		<p>Share your messages with secrecy </p>
+		<div class="bannerbtn">		
+		<div class="dropdown">
+  			<ul><a><span></span><button>Ceasar</button></a>
+  			<div class="dropdown-content">
+  				<a href="inside/CEASAR.html">Encrypt</a>
+  				<a href="inside/CEASARdec.html">Decrypt</a>
+  				</div>	
+				</div>
+			<div class="dropdown">
+				<a><span></span><button>Vigenère</button></a>
+  			<div class="dropdown-content">
+  				<a href="inside/poly.html">Encrypt</a>
+  				<a href="inside/polydec.html">Decrypt</a>
+  				</div>
+				</div>				
+				<div class="dropdown">
+  			<ul><a><span></span><button>Substitution</button></a>
+  			<div class="dropdown-content">
+  				<a href="inside/sub.html">Encrypt</a>
+  				<a href="inside/subdec.html">Decrypt</a>
+  				</div>	
+				</div><br><br><br><br><br>
+				<div class="dropdown">
+				<ul><a><span></span><button>Atbash</button></a>
+  			<div class="dropdown-content">
+  				<a href="inside/atb.html">Encrypt</a>
+  				<a href="inside/atbdec.html">Decrypt</a>
+  				</div>
+				</div>	
+				<div class="dropdown">
+				<ul><a><span></span><button>ROT13</button></a>
+  			<div class="dropdown-content">
+  				<a href="inside/rot.html">Encrypt</a>
+  				<a href="inside/rotdec.html">Decrypt</a>
+  				</div>
+				</div>							
+		</div>	
+		</div>
+	</div>
+</section>
+</body>
+</html>
